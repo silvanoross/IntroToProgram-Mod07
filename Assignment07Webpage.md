@@ -14,3 +14,25 @@ The term pickling in python holds a meaning that is in fact quite close to the s
 This week I decided to turn the code from Assignment 06 that wrote text files into code that did something similar, but wrote pickled binary files instead. This involved a big work-around of many of the variable names and a few of the user-defined functions. Ultimately I was able to successfully re-create the program to write user-inputted data to a binary file. The only trouble I had was getting the program to read from a binary file and store the data into a successful working format. 
 
 ![Figure1.1](https://github.com/silvanoross/IntroToProg-Python-Mod07/blob/main/1.1.PNG)
+
+I had originally stored the pickled data as a simple list:
+
+![Figure1.2](https://github.com/silvanoross/IntroToProg-Python-Mod07/blob/main/1.2.PNG)
+
+I figured by storing the pickled data as a simple list (lst_savepickle) from its original dictionary list it would make for easier reading and writing from a binary file. This however was not the case and the program continues to make a new binary file with each run through. I was not able to fix this bug.
+
+## STRUCTURED ERROR HANDLING
+The only instance of structured error handling I incorporated into this program was with the user input. I made it so the ‘item’ variable within the input() function had to be a string variable and the ‘days’ variable had to be an integer or a floating point value.
+
+![Figure2.1](https://github.com/silvanoross/IntroToProg-Python-Mod07/blob/main/2.1.PNG)
+
+For the menu option I stopped the program from crashing if the user were to enter a non integer or if the integer was out of the range of what was available on the menu of options. This was done with a try, except block with a diminutive of structured error handling. 
+
+## SUMMARY
+This week we learned how to pickle data into a binary file. This helps with more efficient memory usage for computers. Files can be written and accessed in a much different way than when working with a text file. Pickling allows the user to store any kind of data whether it be a dictionary, tuple, list etc. This week we also went through structured error-handling. Having fail safes built into your program can accommodate actions that would otherwise result in unexpected crashes. 
+
+### BIBLIOGRAPHY/HELPFUL LINKS
+>
+1. https://www.geeksforgeeks.org/understanding-python-pickling-example/
+2. https://www.journaldev.com/15638/python-pickle-example#:~:text=Python%20Pickle%20load,%2Dbinary%20(rb)%20mode.
+
